@@ -24,13 +24,8 @@ public class PdfParser
 
     private static PdfDocument ReadPdfFile(string path)
     {
-        var its = new LocationTextExtractionStrategy();
         var reader = new PdfReader(path);
-
-        var pdf = new PdfDocument(reader, its);
-
-        
-
+        var pdf = new PdfDocument(reader);
         return pdf;
     }
 }
